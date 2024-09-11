@@ -1,0 +1,70 @@
+1. To mutate original array
+
+add
+    .push
+    .unshift
+
+remove
+    .pop
+    .shift
+    .splice
+
+others
+    .reverse
+    .sort
+    .fill
+
+2. A new array
+
+computed from array
+    .map (loop)
+
+filtered using condition
+    .filter
+
+portion of original
+    .slice
+
+adding original to other
+    .concat
+
+flattening the original
+    .flat
+    .flatmap
+
+3. An array index
+
+based on value
+    .indexOf
+
+based on test condition
+    .findIndex
+
+4. An array element
+
+based on test condition
+    .find
+
+5. know if array includes
+
+based on value
+    .includes
+
+based on test condition
+    .some
+    .every
+
+6. A new string
+
+based on separator string
+    .join()
+
+7. to transform to value
+
+based on accumulator
+    .reduce
+
+8. to just loop array
+
+based on callback
+    .forEach

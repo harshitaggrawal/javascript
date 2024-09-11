@@ -1,0 +1,31 @@
+DOM: documennt Object model 
+structure  representation of HTML document..
+allows javaScript to access HTML document and style to manipulate them.
+change  text,HTML attributes,and even CSS style..
+
+Example :
+
+//! Document  this is document  
+<html>
+    <head>
+        <title>
+            text="document"
+        </title>
+    </head>
+    <body>
+        <section>
+            <p>
+                text="A paar a"
+                <a>
+                text="link
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <img>
+                src="example.png"
+                alt="DOM 
+        </section>
+    </body>
+</html>   

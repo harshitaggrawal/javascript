@@ -1,0 +1,342 @@
+class 1
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+function Greetings() {
+    return (
+        <div>
+            <Person />
+            <Message />
+        </div>
+    );
+}
+
+const Person = () => <h2>Rahul Sharma</h2>;
+const Message = () => <p>Good Morning</p>;
+
+// function Greeting() {
+//     return React.createElement(
+//         "div",
+//         {},
+//         React.createElement("h2", {}, "This is my nested Heading 2")
+//     );
+// }
+
+//* start with capital letter
+//* must return JSX (html)
+//* JSX must have only one parent element
+//* react fragment : <React.Fragment>...</React.Fragment> or <>...</>
+//* always close tag <Greeting />
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Greetings />);
+
+
+class 2
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+//* external css
+import "./index.css";
+import book2 from "./images/book-2.jpg";
+
+const BookList = () => {
+  return (
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
+};
+
+const Book = () => {
+  return (
+    <article className="book">
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
+};
+
+const Image = () => (
+  <img
+    // src="https://m.media-amazon.com/images/I/71qW8ps0+SL._AC_UY218_.jpg"
+    src={book2}
+    alt="The Selected Works"
+  />
+);
+
+const Title = () => <h3>The Selected Works</h3>;
+
+const Author = () => <p style={{ color: "grey" }}>Franz Kafka</p>;
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<BookList />);
+
+
+class 3
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+//* external css
+import "./index.css";
+
+//* variables
+const title = "The Selected Works";
+const author = "Franz Kafka";
+const img = "https://m.media-amazon.com/images/I/71qW8ps0+SL._AC_UY218_.jpg";
+
+const BookList = () => {
+  return (
+    <section className="booklist">
+      <Book publishYear="2021" sales="1000000" />
+      <Book msg="This book is not released" />
+      <Book />
+    </section>
+  );
+};
+
+const Book = (props) => {
+  console.log(props);
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h3>{title}</h3>
+      <p>{author}</p>
+      <p>{props.publishYear}</p>
+      <p>{props.msg}</p>
+    </article>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<BookList />);
+
+
+class 4
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+//* external css
+import "./index.css";
+
+//* variables
+const bookOne = {
+  title: "The Selected Works",
+  author: "Franz Kafka",
+  img: "https://m.media-amazon.com/images/I/71qW8ps0+SL._AC_UY218_.jpg",
+};
+const bookTwo = {
+  title: "Atomic Habits",
+  author: "James Clear",
+  img: "https://m.media-amazon.com/images/I/91bYsX41DVL._AC_UY218_.jpg",
+};
+const bookThree = {
+  title: "Do It Today",
+  author: "Darius Foroux",
+  img: "https://m.media-amazon.com/images/I/61ZPDQOjw-L._AC_UY218_.jpg",
+};
+
+const BookList = () => {
+  return (
+    <section className="booklist">
+      <Book title={bookOne.title} author={bookOne.author} img={bookOne.img}>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+          provident tempora suscipit blanditiis inventore ab eaque nisi libero!
+          Debitis, temporibus.
+        </p>
+      </Book>
+      
+      <Book title={bookTwo.title} author={bookTwo.author} img={bookTwo.img} />
+
+      <Book
+        title={bookThree.title}
+        author={bookThree.author}
+        img={bookThree.img}
+      />
+    </section>
+  );
+};
+
+const Book = (myProps) => {
+  console.log(myProps);
+  const { title, img, author, children } = myProps;
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h3>{title}</h3>
+      <p>{author}</p>
+
+      {children}
+    </article>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<BookList />);
+
+
+class 4.2
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+//* external css
+import "./index.css";
+
+//* array of objects of books
+const books = [
+  {
+    title: "The Selected Works",
+    author: "Franz Kafka",
+    img: "https://m.media-amazon.com/images/I/71qW8ps0+SL.AC_UY218.jpg",
+  },
+  {
+    title: "Atomic Habits",
+    author: "James Clear",
+    img: "https://m.media-amazon.com/images/I/91bYsX41DVL.AC_UY218.jpg",
+  },
+  {
+    title: "Do It Today",
+    author: "Darius Foroux",
+    img: "https://m.media-amazon.com/images/I/61ZPDQOjw-L.AC_UY218.jpg",
+  },
+];
+
+//* books list section
+const BookList = () => {
+  return (
+    <section className="booklist">
+      {books.map(function (book) {
+        {
+          /* return <Book key={book.title} title={book.title} author={book.author} img={book.img} />; */
+        }
+        {
+          /* return <Book key={book.title} book={book} />; */
+        }
+
+        return <Book key={book.title} {...book} />;
+      })}
+    </section>
+  );
+};
+
+//* single book component
+const Book = (myProps) => {
+  const { title, img, author } = myProps;
+  // const {
+  //   book: { title, author, img },
+  // } = myProps;
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h3>{title}</h3>
+      <p>{author}</p>
+    </article>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<BookList />);
+
+
+
+class --5
+
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+//* external css
+import "./index.css";
+
+//* array of objects of books  and also called JSON data
+const books = [
+  {
+    title: "The Selected Works",
+    author: "Franz Kafka",
+    img: "https://m.media-amazon.com/images/I/71qW8ps0+SL.AC_UY218.jpg",
+  },
+  {
+    title: "Atomic Habits",
+    author: "James Clear",
+    img: "https://m.media-amazon.com/images/I/91bYsX41DVL.AC_UY218.jpg",
+  },
+  {
+    title: "Do It Today",
+    author: "Darius Foroux",
+    img: "https://m.media-amazon.com/images/I/61ZPDQOjw-L.AC_UY218.jpg",
+  },
+];
+
+//* books list section
+const BookList = () => {
+  
+  return (
+<>
+<ReactEvents/>
+    <section className="booklist">
+      {books.map(function (book,index) {
+        {
+          return <Book key={index}   //? its only for 
+          title={book.title} 
+          author={book.author}
+           img={book.img} />;
+        }
+
+      })}
+    </section>
+    </>
+  );
+  
+};
+
+function headingClick()
+{
+  console.log('heading Clicked');
+}
+
+//* single book component
+const Book = ({ title, img, author }) => {
+  // const Clicked=(e)=>{
+  //   console.log(e.target.textContent);
+  // }
+  const advanceClicked=(bookTitle)=>{
+      console.log(bookTitle);
+     }
+
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h3 onClick={headingClick}>{title}</h3>
+      <p onClick={()=>{advanceClicked(title)}}>{author}</p>  //?pass parameter to function
+    </article>
+  );
+};
+
+const ReactEvents=()=>{
+  const handledClick=()=>
+  {
+    console.log('Form Submitted');
+  }
+  const handledSubmit=(e)=>{
+    e.preventDefault();
+    alert('Form Submmitted');
+  }
+  function change(e){
+    console.log(e.target.value);  //user input value
+    console.log('input changes');
+  }
+    return (<div className="container">
+    <form onSubmit={handledSubmit}>
+      <h2>My Form</h2>
+      <input type="text" onChange={change}/>
+      <button type="Submit" onClick={handledClick} >Submit</button>
+    </form>
+  </div>)
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<BookList />);

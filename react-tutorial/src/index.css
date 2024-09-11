@@ -1,0 +1,48 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,300&family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #eee;
+    font-family: 'Rubik', sans-serif;
+}
+.container{
+    width: 90vw;
+    max-height: 980px;
+    margin: 4rem auto;
+
+}
+.booklist{
+    
+    /* margin: .4rem auto; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+}
+.book{
+    flex: 1 1 25rem;
+    background: #fff;
+    padding: 1rem;
+}
+.book img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.book h3{
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.book p{
+    color: #3e3e3e;
+    margin-top: 1rem;
+    font-size: .85rem;
+    font-weight: 400;
+}

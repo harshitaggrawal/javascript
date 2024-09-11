@@ -1,0 +1,90 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap");
+:root{
+    --clr-bg:#111;
+    --clr-text1:#fff;
+    --font-mountain:"Mountains of Christmas",cursive;
+}
+
+
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+   
+    color: white;
+
+}
+body{
+
+    font-family: var(--font-mountain);
+    background-color: var(--clr-bg);
+    color: var(--clr-text1);
+    min-height: 100vh;
+    background: black;
+}
+section{
+    padding :2rem 2rem
+}
+
+.btn{
+    font-family: var(--font-mountain);
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: .75rem 1rem;
+    border-radius: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--clr-bg);
+    background: var(--clr-text1);
+
+}
+
+
+.header .limit{
+    float:  right;
+    font-size: 30px;
+    padding: 25px;
+
+}
+.header .heading{
+    margin: 2rem auto 1.5rem auto;
+    font-size: 3.5rem;
+    font-weight: 700;
+    
+}
+.number{
+    background-color: #eee;
+    color: var(--clr-bg);
+    width: 75px;
+    aspect-ratio: 2/1.4;
+    margin: auto;
+    border-radius: 4px;
+    font-size: 2.5rem;
+}
+.screen{
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.screen input{
+    font-family: var(--font-mountain);
+    font-size: 2rem;
+    background-color: var(--clr-text1);
+    color: var(--clr-bg);
+    border: 2px solid var(--clr-bg);
+    border-radius: 4px;
+    width: 75px;
+    aspect-ratio: 2/1.4;
+}
+.input-tab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}

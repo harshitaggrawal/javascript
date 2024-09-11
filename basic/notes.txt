@@ -1,0 +1,25 @@
+ECMAScript 1 (ES1) - 1997: The first edition of the ECMAScript standard, which provided the initial specification for JavaScript.
+
+ECMAScript 2 (ES2) - 1998: This version introduced minor corrections and editorial changes to the ES1 specification.
+
+ECMAScript 3 (ES3) - 1999: A significant update to the language, ES3 introduced features like regular expressions, try/catch exception handling, and more.
+
+ECMAScript 4 (ES4) - Never Released: ES4 was abandoned during its development due to disagreements over its complexity and backward compatibility. Its features were too ambitious and were never implemented in browsers.
+
+ECMAScript 5 (ES5) - 2009: ES5 introduced important features like strict mode ('use strict'), JSON object support, Array extras (e.g., forEach, map, filter, reduce), and more.
+
+ECMAScript 5.1 (ES5.1) - 2011: A minor revision of ES5 to correct some errors and clarify certain aspects of the specification.
+
+ECMAScript 6 (ES6) / ECMAScript 2015 (ES2015) - 2015: A major update to the language, ES6 introduced many new features including arrow functions, classes, let and const declarations, template literals, destructuring assignment, promises, and more.
+
+ECMAScript 2016 (ES7) / ECMAScript 7 - 2016: ES7 introduced two main features: the Array.prototype.includes method for checking if an array contains a certain element, and the exponential operator (**) for exponentiation.
+
+ECMAScript 2017 (ES8) / ECMAScript 8 - 2017: ES8 introduced features like async functions (async/await), shared memory and atomics with SharedArrayBuffer, Object.values() and Object.entries(), String.prototype.padStart() and String.prototype.padEnd() for string padding, and more.
+
+ECMAScript 2018 (ES9) / ECMAScript 9 - 2018: ES9 introduced features like asynchronous iteration, Promise.prototype.finally(), rest/spread properties for objects, regular expression improvements, and more.
+
+ECMAScript 2019 (ES10) / ECMAScript 10 - 2019: ES10 introduced features like Array.prototype.flat() and Array.prototype.flatMap() for flattening and mapping arrays, String.prototype.trimStart() and String.prototype.trimEnd() for trimming whitespace, Object.fromEntries() for transforming a list of key-value pairs into an object, and more.
+
+ECMAScript 2020 (ES11) / ECMAScript 11 - 2020: ES11 introduced features like BigInt, import() for dynamic imports, global nullish coalescing operator (??), global optional chaining operator (?.), String.prototype.matchAll(), and more.
+
+ECMAScript 2021 (ES12) / ECMAScript 12 - 2021: ES12 introduced features like String.prototype.replaceAll(), Promise.any() for resolving with the first fulfilled promise, Logical Assignment Operators (e.g., ||=, &&=), Numeric Separators for improving readability of numeric literals, WeakRef and FinalizationRegistry for managing weak references, and more.

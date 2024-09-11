@@ -1,0 +1,9 @@
+Que 1. What is the difference between "let", "var", and "const" when declaring variables in JavaScript?
+Que 2. What is the "this" keyword in JavaScript and how does it work?
+Que 3. How can you loop through an array in JavaScript?
+Que 4. What is the difference between "==" and "===" in JavaScript for comparison?
+Que 5. How do you add an event listener to an element in JavaScript?
+Que 6. What are arrow functions in JavaScript and how are they different from regular functions?
+Que 7. How do you manipulate the DOM (Document Object Model) using JavaScript to dynamically change elements on a webpage?
+Que 8. How do you use the "if" statement for conditional execution in JavaScript?
+Que 9. What is the purpose of the "for" loop in JavaScript and how do you use it?.

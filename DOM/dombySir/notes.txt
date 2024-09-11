@@ -1,0 +1,26 @@
+DOM: Document Object Model
+Structured representation of HTML document. Allows JavaScript to access HTML elements and style to manipulate them.
+change text, HTML attributes, and even CSS styles
+
+EXAMPLE:
+
+DOCUMENT
+    <html>
+        <head>
+            <title>
+                text="Document"
+        <body>
+            <section>
+                <p>
+                    text="A para with a "
+                    <a>
+                        text="link"
+                <p>
+                    text="A second para"
+            <section>
+                <img>
+                    src="example.png"
+                    alt="DOM"
+
+
+                    
